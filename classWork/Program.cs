@@ -13,7 +13,7 @@ namespace classWork
     }
     class Sekil
     {
-        //sınıf içerisindeki protected kalıtım veren veya kalıtım alan sınıftan erişilebilir. 
+        //sınıf içerisindeki protected kalıtım veren veya kalıtım alan sınıftan erişilebilir..
         protected int _boy;
         protected int _en;
         public Sekil(int a)
