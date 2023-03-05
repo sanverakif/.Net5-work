@@ -1,5 +1,5 @@
 ﻿Static Constructor Method
-İlgili sınıftan ilk nesne üretilirken tetiklenir. Statik yapılanmalar uygulama bazlı dataları yerleştirdiğimiz alandır. Nesneden bağımsızdır.
+İlgili sınıftan ilk nesne üretilirken tetiklenir. Statik yapılanmalar uygulama bazlı dataları yerleştirdiğimiz alandır. Nesneden bağımsızdır..
 
 
 using System;

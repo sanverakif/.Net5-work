@@ -1,6 +1,6 @@
 ﻿Contructor Method
 Yapıcı methoddur. Nesne üretilirken ilk tetiklenen ve ayağa kaldırılan fonksiyondur. Nesneye ait ayarları ve konfigürasyonları yapabiliceğimiz methoddur.
-Tanımlamasakda default ctor vardır. Nesne oluştururken ilk burası tetiklenir. İstersek ezeriz.
+Tanımlamasakda default ctor vardır. Nesne oluştururken ilk burası tetiklenir. İstersek ezeriz..
 using System;
 
 namespace classWork

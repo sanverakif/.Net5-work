@@ -35,7 +35,7 @@ namespace classWork
     }
     class MyClass2 : MyClass
     {
-        //Classın ctorun yanında kullanıldığında o classın base classının ctorlarını getirir....
+        //Classın ctorun yanında kullanıldığında o classın base classının ctorlarını getirir..
         public MyClass2() : base(5, "uieueiui")
         {
 
