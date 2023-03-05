@@ -1,0 +1,2 @@
+﻿Record
+Nesne oluşturulurken  içerisinde readonly olan propertylerine ilk değerkeni object initilaizer ile veren yapılanmadır.

@@ -1,0 +1,79 @@
+﻿Nesnelerin özelliklerini başka nesnelere aktaribilmedir ve türetebilmesidir.
+
+Kalıtım veren base/parent ana classtır. Kalıtım alan türetilen  derived/chield classtır.
+
+Kalıtım alınan üst sınıf varsa ilk o sınıflardan heap bölgesinde nesne üretilir.
+
+İlk base classın ctoru tetiklenir. base
+
+This sınıftaki ctorlar arasında geçiş yapmamızı sağlar.
+Base sınıfın base ctorların hangisinin tetikleniceğini belirlememizi ve parametreleri varsaad derived classtan verilmesini sağlar.
+
+
+using System;
+
+namespace classWork
+{
+    class Program
+    {
+
+        static void Main(string [] args)
+        {
+            new MyClass2();
+        }
+    }
+
+    class MyClass
+    {
+        public MyClass(int a) { }
+        public MyClass(string a) { }
+        public MyClass(int a, string b) { }
+        public MyClass()
+        {
+
+        }
+    }
+    class MyClass2 : MyClass
+    {
+        //Classın ctorun yanında kullanıldığında o classın base classının ctorlarını getirir.
+        public MyClass2() : base(5, "uieueiui")
+        {
+
+        }
+        public MyClass2(int b) : base(b)
+        {
+            Console.WriteLine(b);
+        }
+    }
+
+    class A
+    {
+        public A()
+        {
+            Console.WriteLine($"{nameof(A)} nesnesi oluşturulmuştur.");
+        }
+        public int MyProperty { get; set; }
+    }
+    class B : A
+    {
+        public B()
+        {
+            Console.WriteLine($"{nameof(B)} nesnesi oluşturulmuştur.");
+        }
+    }
+    class C : B
+    {
+        public C()
+        {
+            Console.WriteLine($"{nameof(C)} nesnesi oluşturulmuştur.");
+        }
+    }
+    class D : C
+    {
+        public D()
+        {
+            Console.WriteLine($"{nameof(D)} nesnesi oluşturulmuştur.");
+        }
+    }
+
+}

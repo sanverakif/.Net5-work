@@ -1,0 +1,32 @@
+﻿Static Constructor Method
+İlgili sınıftan ilk nesne üretilirken tetiklenir. Statik yapılanmalar uygulama bazlı dataları yerleştirdiğimiz alandır. Nesneden bağımsızdır.
+
+
+using System;
+
+namespace classWork
+{
+    class Program
+    {
+
+        static void Main(string [] args)
+        {
+            new MyClass();
+        }
+    }
+
+    class MyClass
+    {
+        //bu sınıftan nesne üretilirken ilk tetiklenicek methoddur.
+        public MyClass()
+        {
+            Console.WriteLine("myclass ctor tetiklendi");
+        }
+        //bu sınıftan ilk nesne üretilirken ilk tetiklenen metoddur.
+        //geri dönüş ve erisim belirleyici yoktur. Sınıf içinde 1 kez tanımlanır. Parametre almaz
+        static MyClass()
+        {
+            Console.WriteLine("myclass static ctor tetiklendi");
+        }
+    }
+}

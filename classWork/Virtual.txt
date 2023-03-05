@@ -1,0 +1,92 @@
+﻿Virtual: Bir sınıfta bildirilen ve o sınıftan türeyen alt sınıflarda tekrar bildirilebilen yapılardır. Memberin sanal olmasının sebebi runtime da belirleniyor.
+Tanımlanmış olan elemanın kendisinden türeyen alt sınıflarda ezilip yeniden yapılandırılmasıdır. Kendi classımızda gelen özelliği değistirebiliyorsak kalıtım
+veren nesnenin içindeki elemanın sanal olmasıdır. Sanal davranışlarla üretilen yapıyı türetilen alt sınıflarda düzeltebiliriz.
+
+
+ornek1
+using System;
+
+namespace classWork
+{
+    class Program
+    {
+
+        static void Main(string [] args)
+        {
+            Kalem k = new Kalem();
+            k.Bilgi();
+            Silgi s = new Silgi();
+            s.Bilgi();
+        }
+    }
+    public class Obje
+    {
+
+        public virtual void Bilgi()
+        {
+            Console.WriteLine("obje");
+        }
+    }
+    class Kalem : Obje
+    {
+        public override void Bilgi()
+        {
+            Console.WriteLine("kalem");
+        }
+    }
+    class Silgi : Obje
+    {
+        public override void Bilgi()
+        {
+            Console.WriteLine("silgi");
+        }
+    }
+    class Ad : Silgi
+    {
+        public override void Bilgi()
+        {
+            base.Bilgi();
+        }
+    }
+}
+
+ornek2
+using System;
+
+namespace classWork
+{
+    class Program
+    {
+        static void Main(string [] args)
+        {
+            Memeli me = new Memeli();
+            me.Konus();
+            Maymun ma = new Maymun();
+            ma.Konus();
+            Inek i = new Inek();
+            i.Konus();
+        }
+    }
+    class Memeli
+    {
+        public virtual void Konus()
+        {
+            Console.WriteLine("ben konuşmuyorum");
+        }
+    }
+    class Maymun : Memeli
+    {
+        public override void Konus()
+        {
+            Console.WriteLine("maymunum");
+        }
+    }
+    class Inek : Memeli
+    {
+        public override void Konus()
+        {
+            Console.WriteLine("ineğim");
+        }
+
+    }
+}
